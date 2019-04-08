@@ -1,1 +1,16 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  margin: 0;
+  background-color: #e0e0e0;
+  font-family: sans-serif;
+}
+
+#app #navLeft {
+  width: inherit;
+  height: inherit;
+  background-color: aquamarine;
+}
+
+#app #navRight {
+  background-color: aquamarine;
+}
+/*# sourceMappingURL=main.css.map */
