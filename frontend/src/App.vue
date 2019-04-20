@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <div id="navLeft">
-      <ul>
-        <li> <router-link to="/">Home</router-link> </li>
-        <li> <router-link to="/about">About</router-link> </li>
-        <li> <router-link to="/products">Products</router-link> </li>
-      </ul>
+    <nav id="nav">
+      <div class="navLeft">
+        <ul>
+          <li> <router-link to="/">Home</router-link> </li>
+          <li> <router-link to="/about">About</router-link> </li>
+          <li> <router-link to="/products">Products</router-link> </li>
+        </ul>
+      </div>
 
       <div class="navRight">
-        search |
-        <router-link to="/profile">Profile</router-link> |
-        kundvagn 
+        <img src="../src\assets\search.svg" alt="search">
+        <router-link to="/profile"><img src="../src\assets\person.svg" alt="profile"></router-link>
+        <img src="../src\assets\shop-cart.svg" alt="shoppingcart"> 
       </div>
-    </div>
+    </nav> 
 
     <router-view/>
 
@@ -20,6 +22,8 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/about">About</router-link>
+      <p>Logo</p>
+      <p>loremibsum</p>
     </footer>
   </div>
 </template>

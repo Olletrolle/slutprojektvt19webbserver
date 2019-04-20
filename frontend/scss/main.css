@@ -1,16 +1,55 @@
 body {
-  margin: 0;
   background-color: #e0e0e0;
   font-family: sans-serif;
 }
 
-#app #navLeft {
-  width: inherit;
-  height: inherit;
+#app #nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#app #nav .navLeft {
+  width: 10vw;
+  height: 10vh;
+  background-color: aquamarine;
+  text-decoration: none;
+}
+
+#app #nav .navLeft ul {
+  list-style: none;
+}
+
+#app #nav .navLeft ul li a {
+  color: red;
+  text-decoration: none;
+}
+
+#app #nav .navRight {
+  width: 25vw;
+  height: 20vh;
   background-color: aquamarine;
 }
 
-#app #navRight {
-  background-color: aquamarine;
+#app #footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+#app #footer a {
+  color: white;
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
