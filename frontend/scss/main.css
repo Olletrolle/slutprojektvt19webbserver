@@ -3,6 +3,18 @@ body {
   font-family: sans-serif;
 }
 
+#app .home h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #app #nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,6 +42,7 @@ body {
 #app #nav .navLeft ul li a {
   color: red;
   text-decoration: none;
+  font-size: 2vw;
 }
 
 #app #nav .navRight {
@@ -51,5 +64,28 @@ body {
 #app #footer a {
   color: white;
   text-decoration: none;
+}
+
+#app .home h1 {
+  font-size: 7vw;
+  top: 1px;
+}
+
+#app .home #products {
+  display: -ms-grid;
+  display: grid;
+  background-color: aquamarine;
+  width: 80vw;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 230px;
+}
+
+#app .home #products section {
+  background-color: bisque;
 }
 /*# sourceMappingURL=main.css.map */

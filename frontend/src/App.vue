@@ -3,7 +3,7 @@
     <nav id="nav">
       <div class="navLeft">
         <ul>
-          <li> <router-link to="/">Home</router-link> </li>
+          <li> <router-link to="/">(logo)</router-link> </li>
           <li> <router-link to="/about">About</router-link> </li>
           <li> <router-link to="/products">Products</router-link> </li>
         </ul>
@@ -28,6 +28,10 @@
   </div>
 </template>
 
+<script>
+</script>
+
+
 <style lang="scss">
-  @import "scss/main.scss";
+@import "scss/main.scss";
 </style>
