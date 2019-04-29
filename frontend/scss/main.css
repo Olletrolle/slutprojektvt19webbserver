@@ -3,7 +3,7 @@ body {
   font-family: sans-serif;
 }
 
-#app .home h1 {
+#app .home h1, #app .profile, #app .profile .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,6 +13,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#app {
+  height: 100vh;
 }
 
 #app #nav {
@@ -30,13 +34,17 @@ body {
 
 #app #nav .navLeft {
   width: 10vw;
-  height: 10vh;
+  height: 8vh;
   background-color: aquamarine;
   text-decoration: none;
 }
 
 #app #nav .navLeft ul {
   list-style: none;
+}
+
+#app #nav .navLeft ul li {
+  margin: 2vw 0;
 }
 
 #app #nav .navLeft ul li a {
@@ -47,15 +55,30 @@ body {
 
 #app #nav .navRight {
   width: 25vw;
-  height: 20vh;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: aquamarine;
 }
 
+#app #nav .navRight img {
+  width: 4vw;
+}
+
 #app #footer {
-  position: fixed;
+  position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  min-width: 100%;
   background-color: red;
   color: white;
   text-align: center;
@@ -67,8 +90,7 @@ body {
 }
 
 #app .home h1 {
-  font-size: 7vw;
-  top: 1px;
+  font-size: 6vw;
 }
 
 #app .home #products {
@@ -87,5 +109,52 @@ body {
 
 #app .home #products section {
   background-color: bisque;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app .home #products section img {
+  background-color: royalblue;
+  width: 20vw;
+  height: 20vh;
+}
+
+#app .home #products section p {
+  font-size: 2vw;
+  color: aliceblue;
+  background-color: black;
+}
+
+#app .profile .content {
+  background-color: #949e9b;
+  height: 100vh;
+  width: 60vw;
+}
+
+#app .profile .content h1 {
+  font-size: 2vw;
+  background-color: aliceblue;
+}
+
+#app .profile .content h2 {
+  font-size: 2vw;
+  background-color: black;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+#app .loginForm {
+  background-color: #0c0c0c;
 }
 /*# sourceMappingURL=main.css.map */

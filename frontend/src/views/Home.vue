@@ -10,6 +10,22 @@
         <img src="" alt="">
         <p>najs</p>
       </section>
+      <section class="product3">
+        <img src="" alt="">
+        <p>najs</p>
+      </section>
+      <section class="product4">
+        <img src="" alt="">
+        <p>najs</p>
+      </section>
+      <section class="product5">
+        <img src="" alt="">
+        <p>najs</p>
+      </section>
+      <section class="product6">
+        <img src="" alt="">
+        <p>najs</p>
+      </section>
     </div>
   </div>
 </template>
