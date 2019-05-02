@@ -3,6 +3,7 @@ require 'sqlite3'
 require 'bcrypt'
 require 'json'
 require 'sinatra/cross_origin'
+require_relative('./funktioner.rb')
 enable :sessions
 
 # configure do
@@ -17,11 +18,31 @@ db = SQLite3::Database.new('./db/webshop.db')
 db.results_as_hash = true
 
 get ("/") do
-    slim("/")
+    slim(:index)
 end
 
-post("/") do
+get ("/profile") do
+    slim(:profile)
+end
 
+post ("/api/profile") do
+    body = request.body.read
+    params = JSON.parse(body)
+
+    content_type :json
+
+    db = db_settings()
+
+    login_data = inloggning()
+
+    return login_data.to_json
+end
+
+get("/profile/:id") do
+    db = db_settings()
+  
+    login_check = login_check()
+  
 end
 
 get('/api/posters') do

@@ -1,10 +1,11 @@
 <template>
   <div class="profile">
-    <Login v-if="showLogin"/>
     <div class="content">
       <h1>gör coolt</h1>
 
       <h2  @click="showLogin = !showLogin">Logga in</h2>
+
+      <Login v-if="showLogin"/>
     </div>
    
   </div>

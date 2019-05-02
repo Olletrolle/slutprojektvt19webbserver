@@ -58,7 +58,7 @@ body{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
+        // bottom: 0;
         min-width: 100%;
         background-color: red;
         color: white;
@@ -120,7 +120,9 @@ body{
             background-color: rgb(148, 158, 155);
             height: 100vh;
             width: 60vw;
-            @extend%center;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
 
             h1{
                 font-size: 2vw;
@@ -133,11 +135,11 @@ body{
                 color: aliceblue;
                 text-decoration: none;
             }
+
+            #login{
+                background-color: black;
+            }
         }
 
-    }
-
-    .loginForm{
-        background-color: rgba(12, 12, 12, 60);
     }
 }  
