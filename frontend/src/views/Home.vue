@@ -3,27 +3,27 @@
     <h1>POPulÄRt</h1>
     <div id="products">
       <section class="product1">
-        <img src="" alt="">
+        <img src="../assets/jojo.jpg" alt="">
         <p>hje</p>
       </section>
       <section class="product2">
-        <img src="" alt="">
+        <img src="../assets/jojo.jpg" alt="">
         <p>najs</p>
       </section>
       <section class="product3">
-        <img src="" alt="">
+        <img src="../assets/jojo.jpg" alt="">
         <p>najs</p>
       </section>
       <section class="product4">
-        <img src="" alt="">
+        <img src="../assets/jojo.jpg" alt="">
         <p>najs</p>
       </section>
       <section class="product5">
-        <img src="" alt="">
+        <img src="../assets/jojo.jpg" alt="">
         <p>najs</p>
       </section>
       <section class="product6">
-        <img src="" alt="">
+        <img src="../assets/jojo.jpg" alt="">
         <p>najs</p>
       </section>
     </div>

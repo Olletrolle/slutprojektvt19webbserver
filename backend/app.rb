@@ -35,6 +35,8 @@ post ("/api/profile") do
 
     login_data = inloggning()
 
+    id = session[:id].to_json
+
     return login_data.to_json
 end
 
@@ -43,6 +45,19 @@ get("/profile/:id") do
   
     login_check = login_check()
   
+end
+
+get("/createUser") do
+    body = request.body.read
+    params = JSON.parse(body)
+
+    content_type :json
+
+    db = db_settings()
+
+    create = createUser()
+
+    return create.to_json
 end
 
 get('/api/posters') do

@@ -3,7 +3,7 @@
     <nav id="nav">
       <div class="navLeft">
         <ul>
-          <li> <router-link to="/">(logo)</router-link> </li>
+          <li> <router-link to="/"><img src="../src/assets/cube.png" alt=""></router-link> </li>
           <li> <router-link to="/about">About</router-link> </li>
           <li> <router-link to="/products">Products</router-link> </li>
         </ul>
@@ -19,11 +19,14 @@
     <router-view/>
 
     <footer id="footer">
-      <router-link to="/about">About</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/about">About</router-link>
-      <p>Logo</p>
-      <p>loremibsum</p>
+
+      <div>
+        <router-link to="/about">About</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/about">About</router-link>
+      </div>
+      <router-link to="/"><img src="../src/assets/cube.png" alt=""></router-link>
+      <P>loremibsum lorem ibsusms ibsium sa sibum</p>
     </footer>
   </div>
 </template>

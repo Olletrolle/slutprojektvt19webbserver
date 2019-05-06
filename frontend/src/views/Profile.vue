@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
     <div class="content">
-      <h1>gör coolt</h1>
+      <router-link class="create" to="/createUser">Gör användare </router-link>
 
       <h2  @click="showLogin = !showLogin">Logga in</h2>
 

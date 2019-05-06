@@ -1,9 +1,10 @@
 body {
-  background-color: #e0e0e0;
+  background-color: whitesmoke;
   font-family: sans-serif;
+  margin: 0;
 }
 
-#app .home h1, #app .profile {
+#app #nav .navRight a, #app .home h1, #app .profile, #app .profile .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +36,6 @@ body {
 #app #nav .navLeft {
   width: 10vw;
   height: 8vh;
-  background-color: aquamarine;
   text-decoration: none;
 }
 
@@ -53,8 +53,12 @@ body {
   font-size: 2vw;
 }
 
+#app #nav .navLeft ul li a img {
+  width: 6vw;
+}
+
 #app #nav .navRight {
-  width: 25vw;
+  width: 10vw;
   height: 8vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,26 +70,31 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: aquamarine;
 }
 
 #app #nav .navRight img {
-  width: 4vw;
+  width: 3vw;
 }
 
 #app #footer {
-  position: absolute;
-  left: 0;
-  right: 0;
   min-width: 100%;
   background-color: red;
   color: white;
   text-align: center;
+  height: 15vh;
 }
 
 #app #footer a {
   color: white;
   text-decoration: none;
+}
+
+#app #footer a img {
+  width: 4vw;
+}
+
+#app #footer p {
+  margin: 8px;
 }
 
 #app .home h1 {
@@ -95,12 +104,15 @@ body {
 #app .home #products {
   display: -ms-grid;
   display: grid;
-  background-color: aquamarine;
+  background-color: black;
   width: 80vw;
   height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 60px;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 230px;
@@ -121,12 +133,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 40px;
 }
 
 #app .home #products section img {
   background-color: royalblue;
   width: 20vw;
-  height: 20vh;
+  height: 25vh;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 #app .home #products section p {
@@ -139,24 +154,14 @@ body {
   background-color: #949e9b;
   height: 100vh;
   width: 60vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
-#app .profile .content h1 {
+#app .profile .content h2 {
   font-size: 2vw;
   background-color: aliceblue;
 }
 
-#app .profile .content h2 {
+#app .profile .content .create {
   font-size: 2vw;
   background-color: black;
   color: aliceblue;
