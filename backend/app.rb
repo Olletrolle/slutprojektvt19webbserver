@@ -5,27 +5,38 @@ require 'json'
 require 'sinatra/cross_origin'
 require_relative('./funktioner.rb')
 enable :sessions
+include MyModule
 
-# configure do
-#     enable :cross_origin
-# end
+# Display Home Page
+#
+get ("/api/") do
+    body = request.body.read
+    params = JSON.parse(body)
 
-# before do
-#     response.headers['Access-Control-Allow-Origin'] = '*'
-# end
+    content_type :json
 
-db = SQLite3::Database.new('./db/webshop.db')
-db.results_as_hash = true
-
-get ("/") do
-    slim(:index)
+    db = db_settings()
 end
 
-get ("/profile") do
-    slim(:profile)
+# Display Profile Page and login form
+#
+get("/api/profile") do
+    body = request.body.read
+    params = JSON.parse(body)
+
+    content_type :json
+
+    db = db_settings()
 end
 
-post ("/api/profile") do
+# Attempts login and redirects to specific profile
+#
+# @param [String] username, The username
+# @param [String] password, The password
+#
+# @param [Integer] :id, the ID of the profile
+# @see Model#login_data
+post("/api/profile") do
     body = request.body.read
     params = JSON.parse(body)
 
@@ -37,17 +48,45 @@ post ("/api/profile") do
 
     id = session[:id].to_json
 
-    return login_data.to_json
+    return id.to_json
 end
 
-get("/profile/:id") do
+# Display a specific persons profile Page
+# Atempts to vaildate the login data 
+#
+# @param [Integer] :id, the ID of the profile
+# @see Model#inloggning
+get("/api/profile/:id") do
+    body = request.body.read
+    params = JSON.parse(body)
+
+    content_type :json
+
     db = db_settings()
-  
+
     login_check = login_check()
-  
+    
+    return login_check
 end
 
-get("/createUser") do
+# Display the creation of a user/profile
+#
+get("/api/createUser") do
+    body = request.body.read
+    params = JSON.parse(body)
+
+    content_type :json
+
+    db = db_settings()
+end
+
+# Show form to register user and redirects to home page
+#
+# @param [String] username, The username
+# @param [String] password, The password
+#
+# @see Model#createUser
+post("/api/createUser") do
     body = request.body.read
     params = JSON.parse(body)
 
@@ -58,8 +97,4 @@ get("/createUser") do
     create = createUser()
 
     return create.to_json
-end
-
-get('/api/posters') do
-    ["omg","asdf"].to_json  
 end
