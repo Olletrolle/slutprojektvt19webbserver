@@ -29,9 +29,10 @@ body{
                 li{
                     margin: 2vw 0;
                     a{
-                        color: red;
+                        color: rgb(26, 26, 26);
                         text-decoration: none;
-                        font-size: 2vw;
+                        font-size: 2em;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
                         img{
                             width: 6vw;
@@ -41,35 +42,61 @@ body{
             }
         }
 
+        .navCenter{
+            margin: 2em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            h1{
+                color: rosybrown;
+                font-size: 5vw;
+                margin-top: 0em;
+                margin-bottom: 2em;
+            }
+        }
+
         .navRight{
-            width: 10vw;
-            height: 8vh;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
 
-            img{
-                width: 3vw;
+            .navRight.main{
+                width: 10vw;
+                height: 8vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                img{
+                    width: 3vw;
+                    color: rgb(26, 26, 26);
+                }
+
+                a{
+                    @extend%center;
+                    color: rgb(26, 26, 26);
+                }
+
+            } 
+
+            .shoppingCart{
+                background-color: goldenrod;
+                width: 20vw;
+                // height: 20vh; (fuckar upp hela lådan)
+                border-radius: 2em;
             }
-
-            a{
-                @extend%center;
-            }
-
-        }  
+        }
          
 
     }
 
     #footer{
         min-width: 100%;
-        background-color: red;
-        color: white;
+        background-color: rgb(26, 26, 26);
+        color: whitesmoke;
         text-align: center;
         height: 15vh;
         
         a{
-            color: white;
+            color: whitesmoke;
             text-decoration: none;
 
             img{
@@ -83,45 +110,59 @@ body{
     }
 
     .home{
-        h1{
-            font-size: 6vw;
+        height: 300vh;
+        width: 100%;
+        background-color: whitesmoke;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            font-size: 3vw;
             @extend%center;
+            margin: auto;
+            text-decoration: underline;
             
         }
 
         #products{
             display: grid;
-            background-color: black;
+            background-color: rgb(26, 26, 26);
             width: 80vw;
-            height: 100vh;
+            height: 260vh;
             justify-content: center;
+            justify-items: center;
             margin: auto;
             display: grid;
-            grid-gap: 60px;
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 230px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 1fr;
 
             section{
-                background-color: bisque;
                 display: flex;
-                justify-content: space-between;
+                
                 align-items: center;
                 flex-direction: column;
-               
-                padding: 40px;
-                
+                width: 80%;
+                height: auto;
 
-                img{
-                    background-color: royalblue;
-                    width: 20vw;
-                    height: 25vh;
-                    object-fit: scale-down;
+                img.vertical{
+                    width: 60%;
+                    height: auto;
+
+                }
+
+                img.horizontel{
+                    width: 80%;
+                    height: auto;
+                    
                 }
 
                 p{
+                    border: solid;
                     font-size: 2vw;
-                    color: aliceblue;
-                    background-color: black;
+                    width: 59%;
+                    align-content: center;
+                    margin: 0px;
+                    color: whitesmoke;
                 }
             }
         }
@@ -147,15 +188,50 @@ body{
     
             .create{
                 font-size: 2vw;
-                background-color: black;
+                background-color: rgb(26, 26, 26);
                 color: aliceblue;
                 text-decoration: none;
             }
 
             #login{
-                background-color: black;
+                background-color: rgb(26, 26, 26);
             }
         }
 
     }
+
+    .about{
+        height: 120vh;
+        width: 100%;
+        background-color: whitesmoke;
+
+        .content{
+            background-color: rgb(26, 26, 26);
+            height: 100vh;
+            width: 60vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+
+            h1{
+                color: whitesmoke;
+            }
+
+            .text{
+                color: whitesmoke;
+                height: 20vh;
+                width: 40vw;
+    
+                p{
+                    font-size: 1.5vw;
+                }
+            }
+             
+
+        }
+
+    }
+
 }  
