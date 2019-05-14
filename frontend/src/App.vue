@@ -17,16 +17,16 @@
         <div class="main">
           <img src="../src\assets\search.svg" alt="search">
           <router-link to="/profile"><img src="../src\assets\person.svg" alt="profile"></router-link>
-          <img src="../src\assets\shop-cart.svg" alt="shoppingcart" @click="showCart = !showCart">
+          <aside>
+            <img src="../src\assets\shop-cart.svg" alt="shoppingcart" @click="showCart = !showCart">
+            <Cart :items="cart" v-if="showCart"/>
+          </aside>
+          
         </div>
-
-        <aside class="shoppingCart">
-          <Cart v-if="showCart"/>
-        </aside>
       </div>
     </nav> 
 
-    <router-view/>
+    <router-view :products="products"/>
 
     <footer id="footer">
 
@@ -51,7 +51,42 @@ export default {
   },
   data(){
     return {
-      showCart: false
+      showCart: false,
+      cart: [],
+      products: [
+        {
+          name: 'Alien',
+          img: 'alien.jpg',
+          size: '43 * 34cm',
+          price: 399,
+          format: 'portrait',
+          // kategori: 'space'
+        },
+        {
+          name: 'jojo',
+          img:  'jojo.jpg',
+          size: '43 * 34cm',
+          price: 399,
+          format: 'portrait',
+          // kategori: 'person'
+        },
+        {
+          name: 'Mista',
+          img: 'mista.jpg',
+          size: '34 * 43cm',
+          price: 799,
+          format: 'landscape',
+          // kategori: 'person'
+        },
+        {
+          name: 'Space',
+          img:  'space.jpg',
+          size: '43 * 34cm',
+          price: 599,
+          format: 'portrait',
+          // kategori: 'space'
+        }
+      ]
     }
   }
 };

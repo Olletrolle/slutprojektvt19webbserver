@@ -1,12 +1,13 @@
 <template>
-  <div class="home">
-    <h2>Populära posters</h2>
-    <div id="products">
+  <div class="kategories">
+        <h2>Kategegori 1</h2>
+        <div id="products" >       <!-- v-if="kategori === 'person'", dela upp posters i kategorier -->
 
-       <item v-for="item in products" v-bind:key="item.products" v-bind:item="item"/>
+            <item v-for="item in products" v-bind:key="item.products" v-bind:item="item"/>
 
-    </div>
+        </div>
   </div>
+
 </template>
 
 <script>
@@ -19,7 +20,7 @@ import item from '@/components/item';
     components: {
       item
     },
-    props: ['products'],
+    props: ['products', ],  //'kategori'
     methods: {
       async getPosters() {
         let res = await this.$http.get("/api/posters");

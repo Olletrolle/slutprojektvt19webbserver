@@ -1,13 +1,25 @@
 <template>
-    <div class="cart">
-        <section class="products">
-            <p>Incert produkter</p>
+    <article id="cart">
+
+        <h2>Kundvagn</h2>
+
+        <section class="products" v-for="item in items" :key="item.name">
+            <section class="cartImg">
+                <img v-bind:src="require('../assets/' + item.img)"  alt="item.name">
+            </section>
+            <section class="cartInfo">
+                <h2>
+                    {{item.name}} |
+                </h2>
+                <h2>
+                    {{item.price}} kr
+                </h2>
+            </section>
         </section>
 
-        <h1>
-            Gå till utcheckning
-        </h1>
-    </div>
+        <h1>Köp</h1>
+
+    </article>
 </template>
 
 
@@ -16,13 +28,8 @@
 import axios from 'axios';
 
 export default {
-    name: 'Login',
-    data(){
-        return {
-            name: null,
-            password: null
-        }
-    },
+    name: 'Cart',
+    props: ['items'],
     methods: {
         async Cart(){
             
